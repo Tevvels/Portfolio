@@ -1,0 +1,18 @@
+.nav{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+.nav-Container{
+    display: flex;
+    gap: 1rem;
+}
+.nav-Item{
+    text-decoration: none;
+    color: black;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+}
