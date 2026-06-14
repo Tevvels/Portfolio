@@ -3,9 +3,10 @@ import Navigation from '../components/Navigation'
 import ProjectContainer from '../components/projectContainer';
 function MyWork() {
 const project = {
-  name:"p1",
+  name:"Deckbox",
   image:"p1 image",
-  desc:"p1 description"
+  desc:"a replica of Moxfield using the skills I currently have",
+  technologies: ['React',"Node","Express","Json",]
 };
 const project2 = {
   name:"p2",

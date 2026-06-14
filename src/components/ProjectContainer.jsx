@@ -6,9 +6,16 @@ function ProjectContainer(props) {
   return (
     <div className={`projectContainer ${props.prop}`}>
       <h2>{project.name}</h2>
-      <button className={`projectImage projectButton `} onClick={''}>{project.image}</button>
+      <button className={`projectImage projectButton `} onClick={''} placeholder={`this is going to ${project.name}`}>{project.image}</button>
       <p>{project.desc}</p>
       
+      {project.technologies ? project.technologies.map((tech,index)=>(
+        <div
+        key={index}
+        >
+          {tech}
+        </div>
+      )):<p>No tech</p>}      
       </div>
   )
 }
