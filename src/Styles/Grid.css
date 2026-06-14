@@ -5,12 +5,15 @@
     
 }
 .landingGrid{
-    grid-template-columns: 5rem 1fr 1fr 1fr 5rem;
-    grid-template-rows: 5rem 10rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows:  10rem;
     grid-template-areas:
-    ". image title name ."
-    ". image details details ."
-    ". footer footer footer ."
+    "."
+    "image"
+    "name"
+    "title"
+    "details"
+    "."
     ;
     border:.5rem solid transparent;
 
