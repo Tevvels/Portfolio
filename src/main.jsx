@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Navigation from './components/Navigation'
 const router = createBrowserRouter([
-  {path:'/',element: <Landing/>},
+  {path:'/',element: <App/>},
   {path: '/contact',element:<Contact/>},
   {path: '/mywork',element:<MyWork/>},
   {path: '*',element:<NotFound />}
@@ -21,9 +21,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className='mainContainer'>
-  <Header />
   <RouterProvider router={router} />
-  <Footer />
   </div>
   </StrictMode>,
 )

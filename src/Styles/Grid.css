@@ -1,0 +1,44 @@
+.grid{
+    display: grid;
+    gap:.5rem;
+
+    
+}
+.landingGrid{
+    grid-template-columns: 1fr;
+    grid-template-rows:  10rem;
+    grid-template-areas:
+    "."
+    "image"
+    "name"
+    "title"
+    "details"
+    "."
+    ;
+    border:.5rem solid transparent;
+
+}
+.landingGrid-name{
+    grid-area: name;
+}
+.landingGrid-title{
+    grid-area: title;
+}
+.landingGrid-image{
+    grid-area: image;
+
+}   
+.landingGrid-details{
+    grid-area: details;
+}
+.landingGrid-nav{
+    grid-area: nav;
+}
+.fa-github {
+  color: #24292e;
+}
+
+/* Styling for LinkedIn */
+.fa-linkedin {
+  color: #0a66c2;
+}

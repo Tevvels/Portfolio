@@ -2,10 +2,10 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
-  text-transform: uppercase;
 
 }
-.mainContainer{
-  background:#111;
-  color: white;
+.box{
+  border-radius:.5rem;
+  box-shadow: 0 0 1rem gray,0 0 1rem inset lightgrey;
+  border:1px solid black
 }
