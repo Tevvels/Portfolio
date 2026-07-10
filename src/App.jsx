@@ -5,14 +5,12 @@ import MyWork from './pages/MyWork.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Navigation from './components/Navigation'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './Styles/General.css'
 function App() {
 
   return(
     <div className='grid'>
-    <Navigation />
     <Landing />
     <Footer/>
     </div>

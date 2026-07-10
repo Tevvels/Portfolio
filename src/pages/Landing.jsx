@@ -3,10 +3,12 @@ import '../Styles/Landing.css'
 import '../Styles/Grid.css'
 import  WatkinsPhoto from'../assets/photos/Watkins_Chris_02.jpg';
 import MyWork from './MyWork';
+import Navigation from '../components/Navigation';
 
 function Landing() {
   return (
     <div className=' landing landingGrid'>
+      <Navigation className={'box landingGrid-nav'}  />
       <h1  className={' box landingGrid-name'}>Christopher Watkins</h1>
       <MyWork />
       <div className={'box landingGrid-title'}>React Developer / Creative Engineer ** better words to be put here</div>

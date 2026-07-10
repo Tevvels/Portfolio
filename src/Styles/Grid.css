@@ -2,9 +2,8 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 15rem;
+  grid-template-rows:  1fr 5rem;
   grid-template-areas:
-    "nav"
     "landing"
     "footer";
   border: 0.5rem solid transparent;
@@ -17,11 +16,15 @@
   grid-template-columns: 1fr;
   grid-template-rows: 10rem;
   grid-template-areas:
+    "nav"
     "name"
     "title"
     "image"
     "details"
     "myWork";
+}
+.landingGrid-nav {
+  grid-area: nav;
 }
 .landingGrid-name {
   grid-area: name;
@@ -73,7 +76,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10rem;
     grid-template-areas:
-      ". image"
+      "nav image"
       "name image"
       "title image"
       "details image"
