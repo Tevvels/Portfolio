@@ -2,7 +2,7 @@ import React from 'react'
 import '../Styles/Footer.css'
 export default function Footer() {
   return (
-    <div className="Footer">Footer
+    <div className="footer">Footer
     
       <p>Copyright 2026</p>
       <p>Designed and built by Chris</p>

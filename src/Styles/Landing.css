@@ -1,11 +1,5 @@
 .landing{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: var(--secondary-color);
-}
-.myPicture{
-    height:75%;
-    width: 100%;
-    object-fit:cover;
-    border-radius: 50%;
 }

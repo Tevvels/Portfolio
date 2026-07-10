@@ -2,14 +2,15 @@ import React from 'react'
 import '../Styles/Landing.css'
 import '../Styles/Grid.css'
 import  WatkinsPhoto from'../assets/photos/Watkins_Chris_02.jpg';
+import MyWork from './MyWork';
 
 function Landing() {
   return (
-    <div className='grid landing landingGrid'>
+    <div className=' landing landingGrid'>
       <h1  className={' box landingGrid-name'}>Christopher Watkins</h1>
-     
+      <MyWork />
       <div className={'box landingGrid-title'}>React Developer / Creative Engineer ** better words to be put here</div>
-      <img className={'box landingGrid-image myPicture'} src={WatkinsPhoto}  />
+      <img className={'box landingGrid-image '} src={WatkinsPhoto}  />
       <div className={'box landingGrid-details'}>
         <p>Here to build beautfiul usable projects.</p>
         <p> To be able to power the future either on a computer or a machine or a robot. </p>

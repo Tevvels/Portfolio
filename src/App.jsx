@@ -7,17 +7,15 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Navigation from './components/Navigation'
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import DarkModeButton from './components/DarkModeButton.jsx'
 import './Styles/General.css'
 function App() {
 
   return(
-    <>
+    <div className='grid'>
     <Navigation />
-    <DarkModeButton />
     <Landing />
     <Footer/>
-    </>
+    </div>
   )
 }
 

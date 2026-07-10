@@ -1,38 +1,45 @@
-.grid{
-    display: grid;
-    gap:.5rem;
-
-    
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15rem;
+  grid-template-areas:
+    "nav"
+    "landing"
+    "footer";
+  border: 0.5rem solid transparent;
 }
-.landingGrid{
-    grid-template-columns: 1fr;
-    grid-template-rows:  10rem;
-    grid-template-areas:
-    "."
-    "image"
+.landing {
+  grid-area: landing;
+}
+.landingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem;
+  grid-template-areas:
     "name"
     "title"
+    "image"
     "details"
-    "."
-    ;
-    border:.5rem solid transparent;
-
+    "myWork";
 }
-.landingGrid-name{
-    grid-area: name;
+.landingGrid-name {
+  grid-area: name;
 }
-.landingGrid-title{
-    grid-area: title;
+.landingGrid-title {
+  grid-area: title;
 }
-.landingGrid-image{
-    grid-area: image;
-
-}   
-.landingGrid-details{
-    grid-area: details;
+.landingGrid-image {
+  grid-area: image;
 }
-.landingGrid-nav{
-    grid-area: nav;
+.landingGrid-details {
+  grid-area: details;
+}
+.nav {
+  grid-area: nav;
+}
+.footer {
+  grid-area: footer;
 }
 .fa-github {
   color: #24292e;
@@ -41,4 +48,36 @@
 /* Styling for LinkedIn */
 .fa-linkedin {
   color: #0a66c2;
+}
+.projectGrid {
+  grid-area: myWork;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "project1" "project2" "project3"
+    "project4" "project" "project6";
+}
+.projectContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "name"
+    "image"
+    "desc";
+}
+@media screen and (min-width: 768px) {
+  .landingGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem;
+    grid-template-areas:
+      ". image"
+      "name image"
+      "title image"
+      "details image"
+      "myWork myWork"
+      ". .";
+  }
 }
