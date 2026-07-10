@@ -36,3 +36,9 @@ html[data-theme="light"] {
     --accent-color: #e8f0fe;
     --text-color: #202124;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

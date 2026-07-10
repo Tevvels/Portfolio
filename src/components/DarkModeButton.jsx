@@ -11,12 +11,10 @@ function DarkModeButton() {
 
 }
   return (
-    <div>
+    <div className="dark-mode-button">
         <button onClick={toggleTheme}>
             switch to {theme === 'light' ? 'dark' : 'light'} mode
         </button>
-
-  
     </div>
   )
 }

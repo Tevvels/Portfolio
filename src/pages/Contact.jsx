@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation'
 
 function Contact() {
   return (
-    <div className='grid contactGrid'>
+    <div className=' contactGrid'>
     <div className='contactGrid-contact'>
         <div>Contact</div>
         <div>email</div>

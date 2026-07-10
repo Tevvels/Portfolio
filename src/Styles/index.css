@@ -5,7 +5,7 @@
 
 }
 .box{
-  border-radius:.5rem;
-  box-shadow: 0 0 1rem gray,0 0 1rem inset lightgrey;
-  border:1px solid black
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
 }
