@@ -3,16 +3,30 @@ import { Link, NavLink, Route, Router, Routes } from 'react-router-dom'
 import '../Styles/Navigation.css'
 import DarkModeButton from './DarkModeButton';
 function Navigation({className}) {
-    const [isActive,setIsActive] = useState(false);
 
+  const handleScroll = (e,target) => {
+    e.preventDefault();
+    const element = document.getElementById(target);
+    if(element) {
+      element.scrollIntoView({ behavior: 'smooth',block: 'start' });
+      }
+    };
+
+
+    
   return (
-    <div className={`${className} nav`}>
-        <DarkModeButton />
-        <NavLink className={`nav-Item`} to="/">home</NavLink>
-        <NavLink className={`nav-Item`} to="/MyWork">Work</NavLink>
-        <NavLink className={`nav-Item`} to="/contact">Contact</NavLink>
+      <nav  className={`${className} nav`}>
+        <div className='nav-left'>
+          <DarkModeButton />
+        </div>
+        <div className='nav-right'>
+
+        <a href="#home" className={`nav-Item`} onClick={(e)=>handleScroll(e,'home')} to="/">home</a>
+        <a href="#work" className={`nav-Item`} onClick={(e)=>handleScroll(e,'work')} to="/MyWork">Work</a>
+        <a href="#contact" className={`nav-Item`} onClick={(e)=>handleScroll(e,'contact')} to="/contact">Contact</a>
    
-    </div>
+      </div>
+    </nav>
   )
 }
 

@@ -1,5 +1,117 @@
-.projectContainer{
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
+/* Individual Project Bento Card */
+.projectContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 12rem auto; /* Row heights for content, preview workspace, and links */
+  gap: 1.25rem;
+  background-color: var(--secondary-color); /* Premium deep dark-slate background */
+  border: 1px solid var(--text-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column; /* Easy column alignment for variable heights */
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+/* Header Text Styles */
+.projectName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.projectDesc {
+  font-size: 0.925rem;
+  color: var(--text-color);
+  opacity: 0.85;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Visual Image Display Box */
+.projectPreview {
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  border: 1px solid var(--text-color),0.15;
+  border-radius: 8px;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  color: #64748b;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Technologies Matrix Container */
+.techBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Individual Tech Pill Styles */
+.techBadge {
+  background-color: #1e293b;
+  color: #38bdf8; /* Sharp neon accent blue */
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  border: 1px solid #334155;
+}
+
+/* Navigation Links Container */
+.projectLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+/* Global Link Buttons Styles */
+.linkBtn {
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.githubBtn {
+  background-color: transparent;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+
+.githubBtn:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.demoBtn {
+  background-color: #0284c7; /* Vibrant primary brand button color */
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.demoBtn:hover {
+  background-color: #0369a1;
+}
+
+/* Desktop Polish Adjustment */
+@media screen and (min-width: 768px) {
+  .projectContainer {
+    min-height: 400px; /* Forces cards into perfect grid structural alignments */
+  }
 }

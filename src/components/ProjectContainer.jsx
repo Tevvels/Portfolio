@@ -1,33 +1,38 @@
 import React from 'react'
 import '../Styles/ProjectContainer.css'
 import '../Styles/Grid.css'
+
+
 function ProjectContainer(props) {
   const {project} = props;
   return (
     <div className={`projectContainer ${props.prop}`}>
-      <h2 className="projectName">{project.name}</h2>
-      <button className={`projectImage projectButton `} onClick={''} placeholder={`this is going to ${project.name}`}>{project.image}</button>
-      <p className='projectDesc'>{project.desc}</p>
-      <div className="demo">
-        <a href={project.Demo} target="_blank" rel="noopener noreferrer">
-          Demo
-        </a>
+      <div className="projectHeader">
+       <h2 className="projectName">{project.name}</h2>
+       <p className='projectDesc'>{project.desc}</p>
       </div>
-      <div className="github">
-        <a href={project.github} target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
+      <div className="projectPreview">
+        <span className="projectPlaceholder">{project.image}</span>
       </div>
-
-
-      {project.technologies ? project.technologies.map((tech,index)=>(
-        <div
-        key={index}
-        >
-          {tech}
+      <div className="projectMeta">
+        <div className="projectTechnologies">
+          {project.technologies ? project.technologies.map((tech,index)=>(
+            <span key={index} className="projectTechnology">
+              {tech}
+            </span>
+          )):<p>No technologies listed</p>}
         </div>
-      )):<p>No tech</p>}      
+        <div className="projectLinks">
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          <a href={project.Demo} target="_blank" rel="noopener noreferrer">
+            Demo
+            </a>
+      </div>  
       </div>
+      </div>
+
   )
 }
 
