@@ -21,12 +21,18 @@ const project2 = {
 
 
   return (
-    <div className=' projectGrid'>
-  
-        <ProjectContainer prop="projectGrid-a" project={project}/>
-        <ProjectContainer prop="projectGrid-b" project={project2}/>
-
-    </div>
+      <section className="workSection">
+      <div className="sectionHeader">
+        <h2>Selected Engineering Systems</h2>
+        <p>Production applications demonstrating integrated web protocols and state management.</p>
+      </div>
+      
+      {/* Pure Grid Wrapper layout */}
+      <div className='projectGrid'>
+        <ProjectContainer prop="project-deckbox" project={project}/>
+        <ProjectContainer prop="project-loya" project={project2}/>
+      </div>
+    </section>
   )
 }
 

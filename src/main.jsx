@@ -14,7 +14,6 @@ import Contact from "./pages/Contact.jsx";
 import MyWork from "./pages/MyWork.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 const router = createBrowserRouter([
   { path: "/", element: <App /> },

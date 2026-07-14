@@ -2,22 +2,34 @@ import React from 'react'
 import '../Styles/Landing.css'
 import '../Styles/Grid.css'
 import  WatkinsPhoto from'../assets/photos/Watkins_Chris_02.jpg';
-import MyWork from './MyWork';
-import Navigation from '../components/Navigation';
 
 function Landing() {
   return (
     <div className=' landing landingGrid'>
-      <Navigation className={'box landingGrid-nav'}  />
-      <h1  className={' box landingGrid-name'}>Christopher Watkins</h1>
-      <MyWork />
-      <div className={'box landingGrid-title'}>React Developer / Creative Engineer ** better words to be put here</div>
+      {/* hook box */}
+      <div className={'box landingGrid-hook'}>
+        <span className={'box landingGrid-hook-text'}>Hello, I'm</span>
+          <h1 className={'box landingGrid-name'}>Christopher Watkins</h1>
+          </div>
+
+    {/* engineering focus title box */}
+      <div className={'box landingGrid-title'}>
+          <h2 className={'box landingGrid-title-text'}>Full-Stack Engineer & Creative Developer</h2>
+          <span className={'sub-matrix-text'}> SYSTEM_ARCH// CLIENT_UI</span>
+        </div>
+    {/* Profile / Professional Portrait Space */}
+    <div className={'box landingGrid-image-wrapper'}>
+    
+    
       <img className={'box landingGrid-image '} src={WatkinsPhoto}  />
-      <div className={'box landingGrid-details'}>
-        <p>Here to build beautfiul usable projects.</p>
-        <p> To be able to power the future either on a computer or a machine or a robot. </p>
-        <i>the landing page needs to grab the attention whoever is getting to it. its gotta win fast.</i>
+
+
       </div>
+    <div className={'box landingGrid-details'}>
+      <p className={'primary-manifesto'}>Here to build beautiful, usable projects.</p>
+      <p className={'call-to-action'}>Let's build something amazing together.</p>
+    </div>
+
     </div>
   )
 }
