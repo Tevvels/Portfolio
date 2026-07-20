@@ -10,10 +10,20 @@ function DarkModeButton() {
       function toggleTheme() {        setTheme(theme === 'light' ? 'dark' : 'light');
 
 }
+function toggleTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+}
+
   return (
     <div className="dark-mode-button">
-        <button onClick={toggleTheme}>
-            switch to {theme === 'light' ? 'dark' : 'light'} mode
+        <button onClick={toggleTheme}
+        className={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        >
+          <div className="icon-wrapper">
+            {theme === 'light' ? '🌙' : '☀️'}
+            </div>
+         
+
         </button>
     </div>
   )
