@@ -1,87 +1,82 @@
-/* Core Layout Shell */
 .grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh; /* Ensures footer stays at the bottom */
+  grid-template-rows: 1fr;
+  grid-template-columns: auto;
 }
 
-/* Mobile-First Layout (Single Clean Column Stacking) */
-.landingGrid {
+.landing {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem; /* The visual gap between bento blocks */
+  grid-template-rows: 1fr;
+}
+.landingTitle{
+  grid-column:1;
+  grid-row:1;
+
+}
+.landingSubTitle{
+  grid-column: 1;
+  grid-row:2
+}
+.landingImage{
+  grid-column: 1/-1;
+  grid-row:3/-1;
+  width: 100%;
+  height: auto;
+  display:block;
+  z-index: 1;
+}
+.landingBadges,
+.landingManifesto{
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+  z-index: 2;
+  align-self: end;
+  color: white;
+  padding: 20px;
 }
 
-/* Bento Card Style Base - Gives the tech portfolio look */
-.landingGrid > div, 
-.projectContainer {
-  border: 1px solid #1f2937;
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-/* Sub-grid for Projects */
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  border: 1rem solid transparent;
-}
-
-.projectContainer {
-  display: grid;
+.workSection,.projectGrid{
+  display:grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-rows: 1fr;
+  gap: .4rem;
 }
-
-/* ---------------------------------------------------- */
-/* Desktop Bento Matrix Transformation (768px and up)   */
-/* ---------------------------------------------------- */
-@media screen and (min-width: 768px) {
-  .landingGrid {
-    /* Define a fixed 3-column grid structure for desktop */
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(140px, auto); /* Balanced row heights */
-    gap: 1.5rem;
+@media screen and (min-width:63rem){
+  .landing{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows:repeat(5,1fr);
+    grid-template-areas:
+    " . . . . ."
+    ". title title img ."
+    ". subtitle badges img ."
+    ". subtitle badges img ."
+    ". subtitle manifesto manifesto .";
+    gap:1rem;
+  }
+  .landingTitle{
+    grid-area:title;
+  }
+  .landingSubTitle{
+    grid-area:subtitle;
+  }
+  .landingImage{
+    grid-area:img;
+  }
+  .landingImage img{
+    object-fit: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+    min-width: 0;
+    min-height:0;
+    
+  }
+  .landingBadges{
+    grid-area:badges;
+    height:100%;
+  }
+  .landingManifesto{
+    grid-area:manifesto
   }
 
-  /* Explicitly map elements to span specific columns and rows like a bento box */
-  .landingGrid-nav {
-    grid-column: 1 / -1; /* Spans across all columns at the top */
-  }
-
-  .landingGrid-name {
-    grid-column: 1 / 3;  /* Takes up 2/3 of the width */
-    grid-row: span 1;
-  }
-
-  .landingGrid-image {
-    grid-column: 3 / 4;  /* Placed cleanly on the right side */
-    grid-row: 2 / 4;     /* Spans downward over two rows */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .landingGrid-title {
-    grid-column: 1 / 2;  /* Smaller block */
-  }
-
-  .landingGrid-details {
-    grid-column: 2 / 3;  /* Fills the gap next to the title */
-  }
-
-  .projectGrid {
-    grid-column: 1 / -1; /* Projects stretch across the full bottom matrix */
-    margin-top: 1rem;
-  }
 }
-
-/* Brand Token Accents */
-.fa-github { color: #24292e; }
-.fa-linkedin { color: #0a66c2; }
-.footer { padding: 2rem 0; text-align: center; }

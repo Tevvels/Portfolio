@@ -1,0 +1,137 @@
+/* Base container styling */
+.glass {
+  width: 100%;
+  height: 100vh;
+  /* 1. Turn the entire component into the 3D scrollable viewport */
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* REPLACEMENT FOR IMAGE: Pure CSS Gradient transitioning from sunset pink to beach teal */
+  background: linear-gradient(
+    170deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+
+  background-attachment: fixed;
+}
+
+/* Parallax structural section holding your circle badges */
+.glass-parallax-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  transform: translateZ(0px);
+  z-index: 5;
+}
+
+/* Outer Frosted Circle Layer (Pops out against the gradient landscape) */
+.glass-background {
+  height: 25%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(
+    12px
+  ); /* Increased blur to make frosted glass look authentic */
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Inner Circle Layer */
+.glass-background-content {
+  height: 85%;
+  width: 85%;
+  background: var(--secondary-color, rgba(255, 255, 255, 0.15));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent 1px solid;
+  box-sizing: border-box;
+}
+
+/* Core Hero Title Header text */
+.glass-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-color, #ffffff);
+  text-align: center;
+  padding: 1rem;
+  line-height: 1.2;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Wrapper that holds everything scrolling over your parallax image */
+.glass-wrapper {
+  width: 100%;
+  min-height: 200vh; /* Expanded height to give room to fly past elements */
+  position: relative;
+  transform-style: preserve-3d; /* Tells browser to respect individual Z depths */
+  pointer-events: none;
+}
+
+/* Rectangular Glassmorphism Content Card */
+.glass-content {
+  /* position: absolute; Changed to absolute so cards can float over each other */
+  width: 100%;
+  /* max-width: 400px;  */
+  padding: 2.5rem;
+  color: var(--text-color, #ffffff);
+  /* Glass Card Properties */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3);
+  pointer-events: auto; /* Restores click tracking inside cards */
+}
+
+/* Optional Add-on: Simulated Foreground Sand Layer using purely CSS shapes */
+
+/* --- Parallax Floating Card Speeds & Positions --- */
+
+/* Deep background layer: Tracks very slowly */
+.section1 {
+  font-size: 1.2rem;
+  top: 15%;
+  left: 60%;
+  transform: translateZ(-2px) scale(3);
+  z-index: 1;
+}
+
+/* Midground layer: Moves slightly faster */
+.section2 {
+  font-size: 1.4rem;
+  top: 60%;
+  left: 15%;
+  transform: translateZ(-1px) scale(2);
+  z-index: 2;
+}
+
+/* Foreground layer: Matches native scroll standard */
+.section3 {
+  font-size: 1.6rem;
+  top: 110%;
+  left: 55%;
+  transform: translateZ(0px);
+  z-index: 3;
+  width: 120px;
+  height: 200px;
+  /* Use a gradient to give it a realistic gemstone sheen */
+  background: linear-gradient(135deg, #a188ff, #43cbff);
+  /* Top point, upper sides, lower sides, bottom point */
+  clip-path: polygon(50% 0%, 85% 25%, 100% 60%, 50% 100%, 0% 60%, 15% 25%);
+}
+
+/* Super foreground layer: Glides rapidly over the cards beneath it */
+.section4 {
+  top: 140%;
+  left: 10%;
+  transform: translateZ(0.2px) scale(0.8);
+  z-index: 4;
+}
