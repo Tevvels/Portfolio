@@ -4,7 +4,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 12rem auto; /* Row heights for content, preview workspace, and links */
   gap: 1.25rem;
-  background-color: var(--secondary-color); /* Premium deep dark-slate background */
+  background-color: var(
+    --secondary-color
+  ); /* Premium deep dark-slate background */
   border: 1px solid var(--text-color);
   border-radius: 16px;
   padding: 1.5rem;
@@ -33,8 +35,14 @@
 
 /* Visual Image Display Box */
 .projectPreview {
-  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-  border: 1px solid var(--text-color),0.15;
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--secondary-color)
+  );
+  border:
+    1px solid var(--text-color),
+    0.15;
   border-radius: 8px;
   height: 12rem;
   display: flex;

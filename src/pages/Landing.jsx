@@ -1,37 +1,43 @@
-import React from 'react'
-import '../Styles/Landing.css'
-import '../Styles/Grid.css'
-import  WatkinsPhoto from'../assets/photos/Watkins_Chris_02.jpg';
+import React from "react";
+import "../Styles/Landing.css";
+import "../Styles/Grid.css";
+import WatkinsPhoto from "../assets/photos/Watkins_Chris_02.jpg";
 
 function Landing() {
   return (
-    <div className=' landing landingGrid'>
-      {/* hook box */}
-      <div className={'box landingGrid-hook'}>
-        <span className={'box landingGrid-hook-text'}>Hello, I'm</span>
-          <h1 className={'box landingGrid-name'}>Christopher Watkins</h1>
-          </div>
-
-    {/* engineering focus title box */}
-      <div className={'box landingGrid-title'}>
-          <h2 className={'box landingGrid-title-text'}>Full-Stack Engineer & Creative Developer</h2>
-          <span className={'sub-matrix-text'}> SYSTEM_ARCH// CLIENT_UI</span>
-        </div>
-    {/* Profile / Professional Portrait Space */}
-    <div className={'box landingGrid-image-wrapper'}>
-    
-    
-      <img className={'box landingGrid-image '} src={WatkinsPhoto}  />
-
-
+    <div className=" landing landingGrid ">
+      <div className="landingTitle glass-content">
+        <span className={" glass-title"}>Howdy, I'm</span>
+        <h1 className={" glass-title "}>Christopher Watkins</h1>
       </div>
-    <div className={'box landingGrid-details'}>
-      <p className={'primary-manifesto'}>Here to build beautiful, usable projects.</p>
-      <p className={'call-to-action'}>Let's build something amazing together.</p>
-    </div>
+      <div className="landingSubTitle glass-content">
+        <h2 className={"box landingGrid-title-text glass-title"}>
+          Full-Stack Engineer & Creative Developer
+        </h2>
+        <span className={"sub-matrix-text glass-title"}>
+          SYSTEM_ARCH// CLIENT_UI
+        </span>
+      </div>
+      <div className="landingImage ">
+        <img className={"box landingGrid-image glass-content "} src={WatkinsPhoto} />
+      </div>
 
+      <div className="landingBadges glass-content">
+        <span className="landingBadge"></span>
+        <span className="landingBadge"></span>
+        <span className="landingBadge"></span>
+        <span className="landingBadge"></span>
+      </div>
+      <div className="landingManifesto">
+      <p className={"primary-manifesto"}>
+        Here to build beautiful, usable projects.
+      </p>
+      <p className={"call-to-action"}>
+        Let's build something amazing together.
+      </p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Landing
+export default Landing;

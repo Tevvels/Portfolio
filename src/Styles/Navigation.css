@@ -1,34 +1,32 @@
-.nav{
-    position:sticky;
-    top:0;
-    z-index:100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    padding: 1rem 2rem;
-    background-color: var(--secondary-color),0.15;
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 2px solid var(--text-color) ;
-    
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: var(--secondary-color), 0.15;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--text-color);
 }
 
-.nav-right{
-    display:flex;
-    gap: 1rem;
+.nav-right {
+  display: flex;
+  gap: 1rem;
 }
 
-.nav-Item{
-
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: color 0.3s ease;
-    color: var(--text-color);
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-    transition: all .3s ease-in-out;
+.nav-Item {
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
-.nav-Item:hover{
-    color:var(--primary-color);
+.nav-Item:hover {
+  color: var(--primary-color);
 }
