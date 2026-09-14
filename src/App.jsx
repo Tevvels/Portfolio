@@ -1,4 +1,3 @@
-import ProjectContainer from './components/ProjectContainer'
 import Landing from './pages/Landing.jsx'
 import Contact from './pages/Contact.jsx'
 import MyWork from './pages/MyWork.jsx'
