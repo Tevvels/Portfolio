@@ -9,9 +9,7 @@ function DarkModeButton() {
   function toggleTheme() {
     setTheme(theme === "light" ? "dark" : "light");
   }
-  function toggleTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
-  }
+
 
   return (
     <div className="dark-mode-button">

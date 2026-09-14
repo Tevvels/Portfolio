@@ -45,7 +45,7 @@
 @media screen and (min-width:63rem){
   .landing{
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows:repeat(5,1fr);
+    grid-template-rows: 1rem 25% 1fr .5fr;
     grid-template-areas:
     " . . . . ."
     ". title title img ."
@@ -76,7 +76,28 @@
     height:100%;
   }
   .landingManifesto{
-    grid-area:manifesto
+    grid-area:manifesto;
   }
+  .workSection{
+    border:.5rem solid transparent;
+    grid-template-columns: 15% 70% 15%;
+   grid-template-areas:
+   ". header ."
+   ". projects ." 
+   ;
+
+
+  }
+  .sectionHeader{
+    grid-area:header;
+  }
+  .projectGrid{
+    grid-area:projects;
+    grid-template-areas:
+    ". project project .";
+    gap:1rem;
+  }
+
+
 
 }

@@ -7,15 +7,21 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  /* REPLACEMENT FOR IMAGE: Pure CSS Gradient transitioning from sunset pink to beach teal */
+
   background: linear-gradient(
     170deg,
-    var(--secondary-color),
-    var(--accent-color)
+    var(--secondary-color) 0%,
+    var(--accent-color)15%,
+    var(--secondary-color) 30%,
+    var(--accent-color) 45%,
+    var(--secondary-color) 60%,
+    var(--accent-color) 75%,
+    var(--secondary-color) 90%,
+    var(--accent-color) 100%
   );
-
   background-attachment: fixed;
 }
+
 
 /* Parallax structural section holding your circle badges */
 .glass-parallax-background {

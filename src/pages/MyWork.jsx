@@ -20,8 +20,8 @@ function MyWork() {
   };
 
   return (
-    <section className="workSection ">
-      <div className="sectionHeader glass-title">
+    <section className="workSection">
+      <div className="sectionHeader glass-content ">
         <h2>Selected Engineering Systems</h2>
         <p>
           Production applications demonstrating integrated web protocols and
@@ -30,7 +30,7 @@ function MyWork() {
       </div>
 
       {/* Pure Grid Wrapper layout */}
-      <div className="projectGrid glass-content">
+      <div className="projectGrid glass-parallax-background">
         <ProjectContainer prop="project-deckbox" project={project} />
         <ProjectContainer prop="project-loya" project={project2} />
       </div>
