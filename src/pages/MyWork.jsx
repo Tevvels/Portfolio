@@ -1,6 +1,5 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import ProjectContainer from "../components/projectContainer";
+import ProjectContainer from "../components/ProjectContainer";
 function MyWork() {
   const project = {
     name: "Deckbox",
