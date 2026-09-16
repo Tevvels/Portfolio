@@ -31,7 +31,6 @@ function MyWork() {
       {/* Pure Grid Wrapper layout */}
       <div className="projectGrid glass-parallax-background">
         <ProjectContainer prop="project-deckbox" project={project} />
-        <ProjectContainer prop="project-loya" project={project2} />
       </div>
     </section>
   );
